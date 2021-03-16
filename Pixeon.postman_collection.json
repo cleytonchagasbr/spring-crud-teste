@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "96a7bab6-00ab-4aee-826b-1fadbd5bc1cd",
+		"name": "Pixeon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "HealthcareInstitution",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Santa casa\",\r\n    \"cnpj\": \"12332133123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/createHealthcareIntitution",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"createHealthcareIntitution"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/listAllInstitutions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"listAllInstitutions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/deleteInstitution?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deleteInstitution"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/getOneInstitution?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getOneInstitution"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Request for HealthcareInstitution"
+		},
+		{
+			"name": "Exam",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"healthcareInstitutionCnpj\": \"12332133123\",\r\n\t\"patientName\": \"Novo\",\r\n\t\"patientAge\": \"13\",\r\n\t\"patientGender\": \"Masculino\",\r\n\t\"physicianName\": \"Dr. Cleyton Souza\",\r\n\t\"physicianCRM\": \"00012312werwe30000\",\r\n\t\"procedureName\": \"Exasdasame\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/createExam",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"createExam"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOneExam",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/getExam?institution=Teste&id_exame=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getExam"
+							],
+							"query": [
+								{
+									"key": "institution",
+									"value": "Teste"
+								},
+								{
+									"key": "id_exame",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
